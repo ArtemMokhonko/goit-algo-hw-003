@@ -1,18 +1,11 @@
-import sys
 from pathlib import Path
-from copy_files import copy_files_recursively
-
+import sys
+from file_operations import copy_files_recursively
+from arg_parser import parse_args
 
 def main():
-    # Перевіряємо кількість аргументів командного рядка
-    if len(sys.argv) < 2:
-        print("Використання: python main.py вихідна_директорія директорія_призначення")
-        sys.exit(1)
-
-    # Отримуємо шлях до вихідної директорії з аргументів командного рядка
-    src_dir = Path(sys.argv[1])
-    # Отримуємо шлях до директорії призначення з аргументів командного рядка або встановлюємо за замовчуванням "dist"
-    dst_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path('dist')
+    # Отримуємо аргументи командного рядка
+    src_dir, dst_dir = parse_args()
 
     # Перевіряємо, чи існує вихідна директорія
     if not src_dir.exists():
