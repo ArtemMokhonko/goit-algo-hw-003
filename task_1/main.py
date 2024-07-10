@@ -1,4 +1,3 @@
-from pathlib import Path
 import sys
 from file_operations import copy_files_recursively
 from arg_parser import parse_args
