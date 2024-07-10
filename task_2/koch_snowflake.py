@@ -21,7 +21,7 @@ def draw_koch_snowflake(order, size=300):
     size: розмір сніжинки 
     """
     window = turtle.Screen()  # Створює вікно для малювання.
-    window.bgcolor("black")  # Встановлює xthyb фон для вікна.
+    window.bgcolor("black")  # Встановлює black фон для вікна.
 
     t = turtle.Turtle()  # Створює об'єкт turtle для малювання.
     t.color("white")  # Встановлює білий колір для черепашки.
