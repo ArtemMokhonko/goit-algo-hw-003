@@ -18,5 +18,18 @@ def solve_hanoi(n):
     hanoi(n, 'A', 'B', 'C', state)
     print(f"Кінцевий стан: {state}")
 
-# Викликаємо функцію для 3 дисків
-solve_hanoi(2)
+def main():
+    while True:
+        try:
+            n = int(input("Введіть кількість дисків: "))
+            if n <= 0:
+                print("Кількість дисків має бути додатнім числом. Спробуйте ще раз.")
+            else:
+                break
+        except ValueError:
+            print("Будь ласка, введіть коректне число.")
+    
+    solve_hanoi(n)
+
+if __name__ == "__main__":
+    main()
